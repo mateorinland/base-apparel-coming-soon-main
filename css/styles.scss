@@ -1,0 +1,76 @@
+@import "reset";
+
+$Desaturated_Red: hsl(0, 36%, 70%);
+$Soft_Red: hsl(0, 93%, 68%);
+$Dark_Grayish_Red: hsl(0, 6%, 24%);
+
+body {
+    font-size: 1rem;
+    font-family: 'Josefin Sans', sans-serif;
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+.logo {
+    width: 27%;
+    margin: 2rem;
+}
+
+.coming-soon-info {
+    padding: 3.5rem 2.5rem;
+    text-align: center;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    letter-spacing: 0.5rem;
+    font-weight: 300;
+    color: $Desaturated_Red;
+}
+
+.title-emphasis {
+    font-weight: 600;
+    color: $Dark_Grayish_Red;
+}
+
+.info {
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    color: $Desaturated_Red;
+}
+
+.form-fieldset {
+    border: none;
+    padding: 0;
+    position: relative;
+}
+
+.email-input {
+    border-radius: 2rem;
+    border: 0.1rem solid $Desaturated_Red;
+    background-color: transparent;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+}
+
+.submit-button {
+    border-radius: 2rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    color: white;
+    font-size: 1.1rem;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
