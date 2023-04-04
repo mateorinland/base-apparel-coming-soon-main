@@ -10,14 +10,46 @@ body {
     background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 }
 
+@media (min-width: 600px) {
+    .main-container {
+        display: grid;
+        grid-template-areas: "logo image" "info image";
+        grid-template-rows: auto 1fr;
+    }
+}
+
 .logo {
     width: 27%;
     margin: 2rem;
 }
 
+.hero-image {
+    max-width: none;
+}
+
+@media (min-width: 600px) {
+    .logo {
+        width: 19%;
+        grid-area: logo;
+        margin: 4rem 0 0 10rem;
+    }
+    .image-container {
+        grid-area: image;
+    }
+}
+
 .coming-soon-info {
     padding: 3.5rem 2.5rem;
     text-align: center;
+}
+
+@media (min-width: 600px) {
+    .coming-soon-info {
+        text-align: left;
+        grid-area: info;
+        padding: 0;
+        margin: 8rem 15rem 0rem 10rem;
+    }
 }
 
 .title {
@@ -27,6 +59,13 @@ body {
     letter-spacing: 0.5rem;
     font-weight: 300;
     color: $Desaturated_Red;
+}
+
+@media (min-width: 600px) {
+    .title {
+        font-size: 4rem;
+        letter-spacing: 1rem;
+    }
 }
 
 .title-emphasis {
@@ -40,30 +79,63 @@ body {
     color: $Desaturated_Red;
 }
 
+@media (min-width: 600px) {
+    .info {
+        font-size: 1rem;
+        margin: 1rem 0 3rem;
+    }
+}
+
 .form-fieldset {
     border: none;
     padding: 0;
     position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-label {
+    width: 100%;
 }
 
 .email-input {
     border-radius: 2rem;
-    border: 0.1rem solid $Desaturated_Red;
+    border: 0.1rem solid hsla(0, 36%, 70%, 0.5);
     background-color: transparent;
     padding: 0.5rem 1.5rem;
-    position: relative;
+    width: 100%;
+}
+
+.email-input::placeholder {
+    color: $Desaturated_Red;
+    opacity: 0.5;
+    font-size: 0.85rem;
 }
 
 .submit-button {
     border-radius: 2rem;
-    padding: 0.5rem 1.5rem;
+    padding: 0.65rem 1.5rem;
     border: none;
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     color: white;
-    font-size: 1.1rem;
+    box-shadow: 0 0 0.3rem $Desaturated_Red;
     position: absolute;
-    top: 0;
-    right: 1rem;
+    height: 100%;
+    right: 0;
+}
+
+.error-icon {
+    display: none;
+    position: absolute;
+    right: 5rem;
+}
+
+.email-error-message {
+    color: $Soft_Red;
+    font-size: 0.75rem;
+    position: absolute;
+    top: 3.25rem;
+    left: 1.75rem;
 }
 
 .attribution {
