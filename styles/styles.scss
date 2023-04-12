@@ -10,7 +10,7 @@ body {
     background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 62.5rem) {
     .main-container {
         display: grid;
         grid-template-areas: "logo image" "info image";
@@ -25,9 +25,10 @@ body {
 
 .hero-image {
     max-width: none;
+    width: 100%;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 62.5rem) {
     .logo {
         width: 19%;
         grid-area: logo;
@@ -36,6 +37,9 @@ body {
     .image-container {
         grid-area: image;
     }
+    .hero-image {
+        width: auto;
+    }
 }
 
 .coming-soon-info {
@@ -43,7 +47,7 @@ body {
     text-align: center;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 62.5rem) {
     .coming-soon-info {
         text-align: left;
         grid-area: info;
@@ -61,7 +65,7 @@ body {
     color: $Desaturated_Red;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 62.5rem) {
     .title {
         font-size: 4rem;
         letter-spacing: 1rem;
@@ -79,7 +83,7 @@ body {
     color: $Desaturated_Red;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 62.5rem) {
     .info {
         font-size: 1rem;
         margin: 1rem 0 3rem;
@@ -139,10 +143,10 @@ body {
 }
 
 .attribution {
-    font-size: 11px;
+    font-size: 0.688rem;
     text-align: center;
 }
 
-.attribution a {
+.attribution-link {
     color: hsl(228, 45%, 44%);
 }

@@ -13,7 +13,13 @@
 
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
+
+#FrontendMentor's files#
 *.md
 /design
-_reset.css
-*map.css
+
+#IDE#
+/node_modules
+package.json
+package-lock.json
+.eslintrc.js

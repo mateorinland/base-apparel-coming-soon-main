@@ -3,7 +3,7 @@ const emailInput = document.querySelector(".email-input");
 const submitButton = document.querySelector(".submit-button");
 const emailErrorMessage = document.querySelector(".email-error-message");
 const errorIcon = document.querySelector(".error-icon");
-const emailValidation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+const emailValidation = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 
 const startTimeout = setInterval(() => {
     emailErrorMessage.style.display = "none";
